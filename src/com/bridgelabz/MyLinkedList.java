@@ -23,6 +23,20 @@ public class MyLinkedList {
         }
     }
 
+    public void append(INode newNode) {
+
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            INode tempNode = this.tail;
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+        }
+    }
+
     public void printMyNode() {
         System.out.println("My Node: " + head);
     }
